@@ -13,7 +13,7 @@ import { icons, images, SIZES, COLORS, FONTS } from '../constants'
 
 const Home = ({ navigation }) => {
 
-    // Dummy Datas
+    // Events
 
     const initialCurrentLocation = {
         streetName: "Vvoy",
@@ -79,8 +79,8 @@ const Home = ({ navigation }) => {
 
     // price rating
     const free = 0
-    const affordable = 1
-    const fairPrice = 2
+    const inexpensive = 1
+    const average = 2
     const expensive = 3
 
     const restaurantData = [
@@ -88,7 +88,7 @@ const Home = ({ navigation }) => {
             id: 1,
             name: "Hoboken Farmers Market",
             categories: [2, 3, 10],
-            priceRating: affordable,
+            priceRating: inexpensive,
             photo: images.farmers_market_1,
             duration: "20 - 30 min",
             location: {
@@ -104,26 +104,9 @@ const Home = ({ navigation }) => {
                     menuId: 1,
                     name: "Hoboken Farmers Market",
                     photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",
-                    calories: 0,
+                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
                     price: 20
                 },
-                {
-                    menuId: 2,
-                    name: "Crispy Chicken Burger with Honey Mustard",
-                    photo: images.honey_mustard_chicken_burger,
-                    description: "Crispy Chicken Burger with Honey Mustard Coleslaw",
-                    calories: 250,
-                    price: 15
-                },
-                {
-                    menuId: 3,
-                    name: "Crispy Baked French Fries",
-                    photo: images.baked_fries,
-                    description: "Crispy Baked French Fries",
-                    calories: 194,
-                    price: 8
-                }
             ]
         },
         {
@@ -131,7 +114,7 @@ const Home = ({ navigation }) => {
             name: "Concert on the Waterfront",
             rating: 4.8,
             categories: [2, 4, 6],
-            priceRating: affordable,
+            priceRating: inexpensive,
             photo: images.pizza_restaurant,
             duration: "15 - 20 min",
             location: {
@@ -236,7 +219,7 @@ const Home = ({ navigation }) => {
             name: "ByProgrammers Cuisine",
             rating: 4.8,
             categories: [1, 2],
-            priceRating: affordable,
+            priceRating: free,
             photo: images.noodle_shop,
             duration: "15 - 20 min",
             location: {
@@ -289,7 +272,7 @@ const Home = ({ navigation }) => {
             name: "ByProgrammers Dessets",
             rating: 4.9,
             categories: [9, 10],
-            priceRating: affordable,
+            priceRating: free,
             photo: images.kek_lapis_shop,
             duration: "35 - 40 min",
             location: {
@@ -462,8 +445,8 @@ const Home = ({ navigation }) => {
 
         return (
             <View style={{ padding: SIZES.padding * 2 }}>
-                <Text style={{ ...FONTS.h1 }}>Main</Text>
-                <Text style={{ ...FONTS.h1 }}>Categories</Text>
+                
+                <Text style={{ ...FONTS.h1 }}>Tags</Text>
 
                 <FlatList
                     data={categories}
@@ -474,9 +457,10 @@ const Home = ({ navigation }) => {
                     contentContainerStyle={{ paddingVertical: SIZES.padding * 2 }}
                 />
             </View>
+            
         )
     }
-
+    
     function renderRestaurantList() {
         const renderItem = ({ item }) => (
             <TouchableOpacity
@@ -486,6 +470,7 @@ const Home = ({ navigation }) => {
                     currentLocation
                 })}
             >
+
                 {/* Image */}
                 <View
                     style={{
@@ -500,52 +485,34 @@ const Home = ({ navigation }) => {
                             height: 200,
                             borderRadius: SIZES.radius
                         }}
-                    />
-
-                    <View
-                        style={{
-                            position: 'absolute',
-                            bottom: 0,
-                            height: 50,
-                            width: SIZES.width * 0.3,
-                            backgroundColor: COLORS.white,
-                            borderTopRightRadius: SIZES.radius,
-                            borderBottomLeftRadius: SIZES.radius,
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            ...styles.shadow
-                        }}
-                    >
-                        <Text style={{ ...FONTS.h4 }}>{item.duration}</Text>
-                    </View>
+                    />  
                 </View>
-
-                {/* Restaurant Info */}
+               
+                {/* Event Name */}
                 <Text style={{ ...FONTS.body2 }}>{item.name}</Text>
-
                 <View
                     style={{
                         marginTop: SIZES.padding,
                         flexDirection: 'row'
                     }}
                 >
-                    {/* Rating */}
-                    <Image
-                        source={icons.star}
-                        style={{
-                            height: 20,
-                            width: 20,
-                            tintColor: COLORS.primary,
-                            marginRight: 10
-                        }}
-                    />
-                    <Text style={{ ...FONTS.body3 }}>{item.rating}</Text>
-
+                    {/* Price */}
+                        {
+                            [1, 2, 3].map((priceRating) => (
+                                <Text
+                                    key={priceRating}
+                                    style={{
+                                        ...FONTS.body3,
+                                        color: (priceRating <= item.priceRating) ? COLORS.black : COLORS.darkgray
+                                    }}
+                                >$</Text>
+                            ))
+                        }
                     {/* Categories */}
                     <View
                         style={{
                             flexDirection: 'row',
-                            marginLeft: 10
+                            marginLeft: 15
                         }}
                     >
                         {
@@ -560,20 +527,7 @@ const Home = ({ navigation }) => {
                                     </View>
                                 )
                             })
-                        }
-
-                        {/* Price */}
-                        {
-                            [1, 2, 3].map((priceRating) => (
-                                <Text
-                                    key={priceRating}
-                                    style={{
-                                        ...FONTS.body3,
-                                        color: (priceRating <= item.priceRating) ? COLORS.black : COLORS.darkgray
-                                    }}
-                                >$</Text>
-                            ))
-                        }
+                        }  
                     </View>
                 </View>
             </TouchableOpacity>
