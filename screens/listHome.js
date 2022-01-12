@@ -27,52 +27,52 @@ const Home = ({ navigation }) => {
         {
             id: 1,
             name: "All",
-            icon: icons.rice_bowl,
+            icon: icons.like,
         },
         {
             id: 2,
             name: "Free",
-            icon: icons.noodle,
+            icon: icons.like,
         },
         {
             id: 3,
             name: "Food",
-            icon: icons.hotdog,
+            icon: icons.like,
         },
         {
             id: 4,
             name: "Concerts",
-            icon: icons.salad,
+            icon: icons.like,
         },
         {
             id: 5,
             name: "Kids",
-            icon: icons.hamburger,
+            icon: icons.like,
         },
         {
             id: 6,
             name: "Markets",
-            icon: icons.pizza,
+            icon: icons.like,
         },
         {
             id: 7,
             name: "Kids",
-            icon: icons.fries,
+            icon: icons.like,
         },
         {
             id: 8,
             name: "Self Care",
-            icon: icons.sushi,
+            icon: icons.like,
         },
         {
             id: 9,
             name: "Nature",
-            icon: icons.donut,
+            icon: icons.like,
         },
         {
             id: 10,
             name: "Holidays",
-            icon: icons.drink,
+            icon: icons.like,
         },
 
     ]
@@ -93,11 +93,9 @@ const Home = ({ navigation }) => {
             location: {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
+           // website: 
             },
-            courier: {
-                avatar: images.avatar_1,
-                name: "Amy"
-            },
+           
             menu: [
                 {
                     menuId: 1,
@@ -118,10 +116,7 @@ const Home = ({ navigation }) => {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
             },
-            courier: {
-                avatar: images.avatar_1,
-                name: "Amy"
-            },
+           
             menu: [
                 {
                     menuId: 1,
@@ -142,10 +137,7 @@ const Home = ({ navigation }) => {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
             },
-            courier: {
-                avatar: images.avatar_1,
-                name: "Amy"
-            },
+           
             menu: [
                 {
                     menuId: 1,
@@ -166,10 +158,7 @@ const Home = ({ navigation }) => {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
             },
-            courier: {
-                avatar: images.avatar_1,
-                name: "Amy"
-            },
+           
             menu: [
                 {
                     menuId: 1,
@@ -190,10 +179,8 @@ const Home = ({ navigation }) => {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
             },
-            courier: {
-                avatar: images.avatar_1,
-                name: "Amy"
-            },
+          
+           
             menu: [
                 {
                     menuId: 1,
@@ -214,10 +201,7 @@ const Home = ({ navigation }) => {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
             },
-            courier: {
-                avatar: images.avatar_1,
-                name: "Amy"
-            },
+           
             menu: [
                 {
                     menuId: 1,
@@ -391,6 +375,8 @@ const Home = ({ navigation }) => {
                                 >$</Text>
                             ))
                         }
+                  
+
                     {/* Categories */}
                     <View
                         style={{
