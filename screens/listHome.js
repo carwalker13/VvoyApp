@@ -26,17 +26,17 @@ const Home = ({ navigation }) => {
     const categoryData = [
         {
             id: 1,
-            name: "Free",
+            name: "All",
             icon: icons.rice_bowl,
         },
         {
             id: 2,
-            name: "Food",
+            name: "Free",
             icon: icons.noodle,
         },
         {
             id: 3,
-            name: "Markets",
+            name: "Food",
             icon: icons.hotdog,
         },
         {
@@ -51,7 +51,7 @@ const Home = ({ navigation }) => {
         },
         {
             id: 6,
-            name: "Small Business",
+            name: "Markets",
             icon: icons.pizza,
         },
         {
@@ -87,10 +87,9 @@ const Home = ({ navigation }) => {
         {
             id: 1,
             name: "Hoboken Farmers Market",
-            categories: [2, 3, 10],
+            categories: [1, 3, 6],
             priceRating: inexpensive,
-            photo: images.farmers_market_1,
-            duration: "20 - 30 min",
+            photo: images.farmers_market_1,         
             location: {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
@@ -107,7 +106,7 @@ const Home = ({ navigation }) => {
                     description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
                     price: 20
                 },
-            ]
+            ]   
         },
         {
             id: 2,
@@ -342,27 +341,11 @@ const Home = ({ navigation }) => {
     function renderHeader() {
         return (
             <View style={{ flexDirection: 'row', height: 50 }}>
-                <TouchableOpacity
-                    style={{
-                        width: 50,
-                        paddingLeft: SIZES.padding * 2,
-                        justifyContent: 'center'
-                    }}
-                >
-                    <Image
-                        source={icons.nearby}
-                        resizeMode="contain"
-                        style={{
-                            width: 30,
-                            height: 30
-                        }}
-                    />
-                </TouchableOpacity>
-
+                
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                     <View
                         style={{
-                            width: '70%',
+                            width: '92%',
                             height: "100%",
                             backgroundColor: COLORS.lightGray3,
                             alignItems: 'center',
@@ -374,22 +357,7 @@ const Home = ({ navigation }) => {
                     </View>
                 </View>
 
-                <TouchableOpacity
-                    style={{
-                        width: 50,
-                        paddingRight: SIZES.padding * 2,
-                        justifyContent: 'center'
-                    }}
-                >
-                    <Image
-                        source={icons.basket}
-                        resizeMode="contain"
-                        style={{
-                            width: 30,
-                            height: 30
-                        }}
-                    />
-                </TouchableOpacity>
+                
             </View>
         )
     }
@@ -445,8 +413,7 @@ const Home = ({ navigation }) => {
 
         return (
             <View style={{ padding: SIZES.padding * 2 }}>
-                
-                <Text style={{ ...FONTS.h1 }}>Tags</Text>
+              
 
                 <FlatList
                     data={categories}

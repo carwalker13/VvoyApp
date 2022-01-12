@@ -10,7 +10,7 @@ export const hotdog = require("../assets/icons/hotdog.png");
 export const like = require("../assets/icons/like.png");
 export const list = require("../assets/icons/list.png");
 export const location = require("../assets/icons/location.png");
-export const master_card = require("../assets/icons/mastercard.png");
+
 export const nearby = require("../assets/icons/nearby.png");
 export const noodle = require("../assets/icons/noodle.png");
 export const pin = require("../assets/icons/pin.png");
@@ -27,27 +27,27 @@ export const user = require("../assets/icons/user.png");
 export default {
     back,
     car,
-    cutlery,
+    cutlery, //tabs
     donut,
     drink,
     fire,
     fries,
     hamburger,
     hotdog,
-    like,
+    like, //tabs
     list,
-    location,
-    master_card,
-    nearby,
+    location, 
+
+    nearby, //top left icon
     noodle,
     pin,
     pizza,
     red_pin,
     rice_bowl,
     salad,
-    search,
-    basket,
+    search, //tabs
+    basket, //top right icon
     star,
     sushi,
-    user,
+    user, //tabs
 }
