@@ -27,52 +27,52 @@ const Home = ({ navigation }) => {
         {
             id: 1,
             name: "All",
-            icon: icons.like,
+            icon: icons.one,
         },
         {
             id: 2,
             name: "Free",
-            icon: icons.like,
+            icon: icons.two,
         },
         {
             id: 3,
             name: "Food",
-            icon: icons.like,
+            icon: icons.three,
         },
         {
             id: 4,
-            name: "Concerts",
-            icon: icons.like,
+            name: "Markets",
+            icon: icons.four,
         },
         {
             id: 5,
-            name: "Kids",
-            icon: icons.like,
+            name: "Music",
+            icon: icons.five,
         },
         {
             id: 6,
-            name: "Markets",
-            icon: icons.like,
+            name: "Small Business",
+            icon: icons.six,
         },
         {
             id: 7,
             name: "Kids",
-            icon: icons.like,
+            icon: icons.seven,
         },
         {
             id: 8,
             name: "Self Care",
-            icon: icons.like,
+            icon: icons.eight,
         },
         {
             id: 9,
             name: "Nature",
-            icon: icons.like,
+            icon: icons.nine,
         },
         {
             id: 10,
             name: "Holidays",
-            icon: icons.drink,
+            icon: icons.ten,
         },
 
     ]
