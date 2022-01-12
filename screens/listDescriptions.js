@@ -14,7 +14,7 @@ import { icons, COLORS, SIZES, FONTS } from '../constants'
 
 const Restaurant = ({ route, navigation }) => {
 
-  
+    const scrollX = new Animated.Value(0);
     const [restaurant, setRestaurant] = React.useState(null);
     const [currentLocation, setCurrentLocation] = React.useState(null);
     const [orderItems, setOrderItems] = React.useState([]);
@@ -61,13 +61,14 @@ const Restaurant = ({ route, navigation }) => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             paddingHorizontal: SIZES.padding * 3,
-                           // borderRadius: SIZES.radius,
+                          //  borderRadius: SIZES.radius,
                            // backgroundColor: COLORS.lightGray3
                         }}
                     >
                         <Text style={{ ...FONTS.h3 }}>{restaurant?.name}</Text>
                     </View>
                 </View>
+
             </View>
         )
     }
@@ -104,7 +105,7 @@ const Restaurant = ({ route, navigation }) => {
                                     paddingHorizontal: SIZES.padding * 2
                                 }}
                             >
-                                <Text style={{ marginVertical: 10, textAlign: 'center', ...FONTS.h2}}>{item.name}</Text>
+                                <Text style={{ marginVertical: 10, textAlign: 'center', ...FONTS.h2 }}>{item.name}</Text>
                                 <Text style={{ ...FONTS.body3 }}>{item.description}</Text>
                             </View>                           
                         </View>
@@ -136,7 +137,7 @@ const Restaurant = ({ route, navigation }) => {
                             borderBottomWidth: 1
                         }}
                     >
-                        <Text style={{ ...FONTS.h3 }}>Every Tuesday, 2pm-6pm</Text>
+                        <Text style={{ ...FONTS.h3 }}>Every Tuesday, 2-6pm</Text>
  
                     </View>
 

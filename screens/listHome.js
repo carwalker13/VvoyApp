@@ -72,7 +72,7 @@ const Home = ({ navigation }) => {
         {
             id: 10,
             name: "Holidays",
-            icon: icons.like,
+            icon: icons.drink,
         },
 
     ]
@@ -93,7 +93,6 @@ const Home = ({ navigation }) => {
             location: {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
-           // website: 
             },
            
             menu: [
@@ -375,8 +374,6 @@ const Home = ({ navigation }) => {
                                 >$</Text>
                             ))
                         }
-                  
-
                     {/* Categories */}
                     <View
                         style={{
