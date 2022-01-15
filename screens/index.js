@@ -1,7 +1,9 @@
 import Home from "./listHome"
-import Restaurant from "./listDescriptions"
+import Description from "./listDescriptions"
+import favorites from "./favorites"
 
 export {
     Home,
-    Restaurant, 
+    Description,
+    favorites,
 }

@@ -12,7 +12,7 @@ import { isIphoneX } from 'react-native-iphone-x-helper'
 
 import { icons, COLORS, SIZES, FONTS } from '../constants'
 
-const Restaurant = ({ route, navigation }) => {
+const Description = ({ route, navigation }) => {
 
     const scrollX = new Animated.Value(0);
     const [restaurant, setRestaurant] = React.useState(null);
@@ -118,7 +118,7 @@ const Restaurant = ({ route, navigation }) => {
     function renderOrder() {
         return (
             <View>
-                {    
+                {
                 }
                 <View
                     style={{
@@ -221,4 +221,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Restaurant;
+export default Description
