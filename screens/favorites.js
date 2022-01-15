@@ -29,17 +29,6 @@ const favorites = ({ navigation }) => {
             name: "All",
             icon: icons.one,
         },
-        {
-            id: 2,
-            name: "Free",
-            icon: icons.two,
-        },
-        {
-            id: 3,
-            name: "Food",
-            icon: icons.three,
-        },
-
     ]
 
     // price rating
@@ -52,129 +41,14 @@ const favorites = ({ navigation }) => {
         {
             id: 1,
             name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
+            categories: [1],
             priceRating: inexpensive,
             photo: images.farmers_market_1,         
             location: {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
             },
-           
-            menu: [
-                {
-                    menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
-
-                },
-            ]   
-        },
-        {
-            id: 2,
-            name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
-            priceRating: inexpensive,
-            photo: images.farmers_market_1,         
-            location: {
-                latitude: 1.5347282806345879,
-                longitude: 110.35632207358996,
-            },
-           
-            menu: [
-                {
-                    menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
-
-                },
-            ]   
-        },
-        {
-            id: 3,
-            name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
-            priceRating: inexpensive,
-            photo: images.farmers_market_1,         
-            location: {
-                latitude: 1.5347282806345879,
-                longitude: 110.35632207358996,
-            },
-           
-            menu: [
-                {
-                    menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
-
-                },
-            ]   
-        },
-        {
-            id: 4,
-            name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
-            priceRating: inexpensive,
-            photo: images.farmers_market_1,         
-            location: {
-                latitude: 1.5347282806345879,
-                longitude: 110.35632207358996,
-            },
-           
-            menu: [
-                {
-                    menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
-
-                },
-            ]   
-        },
-        {
-            id: 5,
-            name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
-            priceRating: inexpensive,
-            photo: images.farmers_market_1,         
-            location: {
-                latitude: 1.5347282806345879,
-                longitude: 110.35632207358996,
-            },
-          
-           
-            menu: [
-                {
-                    menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
-
-                },
-            ]   
-        },
-        {
-            id: 6,
-            name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
-            priceRating: inexpensive,
-            photo: images.farmers_market_1,         
-            location: {
-                latitude: 1.5347282806345879,
-                longitude: 110.35632207358996,
-            },
-           
-            menu: [
-                {
-                    menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
-
-                },
-            ]   
+ 
         },
     ]
 

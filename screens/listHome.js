@@ -37,22 +37,21 @@ const Home = ({ navigation }) => {
         {
             id: 3,
             name: "Food",
-            icon: icons.three,
+            icon: icons.food,
         },
         {
             id: 4,
             name: "Markets",
-            icon: icons.four,
+            icon: icons.markets,
         },
-        {
-            id: 5,
+        {   id: 5,
             name: "Music",
-            icon: icons.five,
+            icon: icons.music,
         },
         {
             id: 6,
-            name: "Small Business",
-            icon: icons.six,
+            name: "Shop Local",
+            icon: icons.shopLocal,
         },
         {
             id: 7,
@@ -61,19 +60,30 @@ const Home = ({ navigation }) => {
         },
         {
             id: 8,
-            name: "Self Care",
-            icon: icons.eight,
+            name: "Nature",
+            icon: icons.nature,
         },
         {
             id: 9,
-            name: "Nature",
-            icon: icons.nine,
+            name: "Pets",
+            icon: icons.pets,
         },
         {
             id: 10,
-            name: "Holidays",
-            icon: icons.ten,
+            name: "Retail",
+            icon: icons.retail,
         },
+        {
+            id: 11,
+            name: "Exercise",
+            icon: icons.exercise,
+        },
+        {
+            id: 12,
+            name: "Self Care",
+            icon: icons.selfCare,
+        },
+        
 
     ]
 
@@ -331,7 +341,7 @@ const Home = ({ navigation }) => {
         const renderItem = ({ item }) => (
             <TouchableOpacity
                 style={{ marginBottom: SIZES.padding * 2 }}
-                onPress={() => navigation.navigate("Restaurant", {
+                onPress={() => navigation.navigate("Description", {
                     item,
                     currentLocation
                 })}
