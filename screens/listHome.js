@@ -16,7 +16,7 @@ const Home = ({ navigation }) => {
     // Events
 
     const initialCurrentLocation = {
-        streetName: "Vvoy- Adventure Awaits",
+        streetName: "Vvoy",
         gps: {
             latitude: 1.5496614931250685,
             longitude: 110.36381866919922
@@ -137,7 +137,7 @@ const Home = ({ navigation }) => {
                     menuId: 1,
                     name: "Happy Hero Hour, $6 Heros",
                     photo: images.vitos,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",  
+                    description: "Event Description",  
                     address: "1301 Hudson Street",
 
 
@@ -160,7 +160,7 @@ const Home = ({ navigation }) => {
                     menuId: 1,
                     name: "Family Farmers Market",
                     photo: images.familyMarket1,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",   
+                    description: "Event Description",   
                     address: "1301 Hudson Street"          
 
                 },
@@ -182,7 +182,7 @@ const Home = ({ navigation }) => {
                     menuId: 1,
                     name: "Story Time at the Hoboken Museum",
                     photo: images.storytime,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",  
+                    description: "Event Description",  
                     address: "1301 Hudson Street",           
 
                 },
@@ -205,7 +205,7 @@ const Home = ({ navigation }) => {
                     menuId: 1,
                     name: "Artisan Market",
                     photo: images.artisan,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",  
+                    description: "Event Description",  
                     address: "1301 Hudson Street",           
 
                 },
@@ -227,7 +227,7 @@ const Home = ({ navigation }) => {
                     menuId: 1,
                     name: "“CIRCUS LIVES: Hovering Above, Balancing Below” Art Exhibit",
                     photo: images.circus,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.", 
+                    description: "Event Description", 
                     address: "1301 Hudson Street",            
 
                 },
@@ -326,8 +326,6 @@ const Home = ({ navigation }) => {
 
         return (
             <View style={{ padding: SIZES.padding * 2 }}>
-              
-
                 <FlatList
                     data={categories}
                     horizontal
@@ -336,8 +334,7 @@ const Home = ({ navigation }) => {
                     renderItem={renderItem}
                     contentContainerStyle={{ paddingVertical: SIZES.padding * 2 }}
                 />
-            </View>
-            
+            </View>            
         )
     }
     
@@ -377,8 +374,7 @@ const Home = ({ navigation }) => {
                     }}
                 >
                     {/* Price */}
-                        {
-                            [1, 2, 3].map((priceRating) => (
+                        { [1, 2, 3].map((priceRating) => (
                                 <Text
                                     key={priceRating}
                                     style={{
@@ -395,8 +391,7 @@ const Home = ({ navigation }) => {
                             marginLeft: 15
                         }}
                     >
-                        {
-                            item.categories.map((categoryId) => {
+                        { item.categories.map((categoryId) => {
                                 return (
                                     <View
                                         style={{ flexDirection: 'row' }}
