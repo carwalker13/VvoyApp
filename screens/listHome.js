@@ -16,7 +16,7 @@ const Home = ({ navigation }) => {
     // Events
 
     const initialCurrentLocation = {
-        streetName: "Vvoy",
+        streetName: "Vvoy- Adventure Awaits",
         gps: {
             latitude: 1.5496614931250685,
             longitude: 110.36381866919922
@@ -27,12 +27,12 @@ const Home = ({ navigation }) => {
         {
             id: 1,
             name: "All",
-            icon: icons.one,
+            icon: icons.all,
         },
         {
             id: 2,
             name: "Free",
-            icon: icons.two,
+            icon: icons.free,
         },
         {
             id: 3,
@@ -56,7 +56,7 @@ const Home = ({ navigation }) => {
         {
             id: 7,
             name: "Kids",
-            icon: icons.seven,
+            icon: icons.kids,
         },
         {
             id: 8,
@@ -80,9 +80,15 @@ const Home = ({ navigation }) => {
         },
         {
             id: 12,
+            name: "Art",
+            icon: icons.art,
+        },
+        {
+            id: 13,
             name: "Self Care",
             icon: icons.selfCare,
         },
+        
         
 
     ]
@@ -97,7 +103,7 @@ const Home = ({ navigation }) => {
         {
             id: 1,
             name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
+            categories: [1, 3, 4, 6],
             priceRating: inexpensive,
             photo: images.farmers_market_1,         
             location: {
@@ -117,10 +123,10 @@ const Home = ({ navigation }) => {
         },
         {
             id: 2,
-            name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
+            name: "Happy Hero Hour, $6 Heros",
+            categories: [1, 3],
             priceRating: inexpensive,
-            photo: images.farmers_market_1,         
+            photo: images.vitos,         
             location: {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
@@ -129,19 +135,21 @@ const Home = ({ navigation }) => {
             menu: [
                 {
                     menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
+                    name: "Happy Hero Hour, $6 Heros",
+                    photo: images.vitos,
+                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",  
+                    address: "1301 Hudson Street",
+
 
                 },
             ]   
         },
         {
             id: 3,
-            name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
+            name: "Family Farmers Market",
+            categories: [1, 3, 4, 6],
             priceRating: inexpensive,
-            photo: images.farmers_market_1,         
+            photo: images.familyMarket,         
             location: {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
@@ -150,19 +158,20 @@ const Home = ({ navigation }) => {
             menu: [
                 {
                     menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
+                    name: "Family Farmers Market",
+                    photo: images.familyMarket1,
+                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",   
+                    address: "1301 Hudson Street"          
 
                 },
             ]   
         },
         {
             id: 4,
-            name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
+            name: "Story Time at the Hoboken Museum",
+            categories: [1, 7],
             priceRating: inexpensive,
-            photo: images.farmers_market_1,         
+            photo: images.museum,         
             location: {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
@@ -171,19 +180,20 @@ const Home = ({ navigation }) => {
             menu: [
                 {
                     menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
+                    name: "Story Time at the Hoboken Museum",
+                    photo: images.storytime,
+                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",  
+                    address: "1301 Hudson Street",           
 
                 },
             ]   
         },
         {
             id: 5,
-            name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
+            name: "Artisan Market",
+            categories: [1, 4, 6, 12],
             priceRating: inexpensive,
-            photo: images.farmers_market_1,         
+            photo: images.artisan,         
             location: {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
@@ -193,19 +203,20 @@ const Home = ({ navigation }) => {
             menu: [
                 {
                     menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
+                    name: "Artisan Market",
+                    photo: images.artisan,
+                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",  
+                    address: "1301 Hudson Street",           
 
                 },
             ]   
         },
         {
             id: 6,
-            name: "Hoboken Farmers Market",
-            categories: [1, 3, 6],
-            priceRating: inexpensive,
-            photo: images.farmers_market_1,         
+            name: "“CIRCUS LIVES: Hovering Above, Balancing Below” Art Exhibit",
+            categories: [1, 2, 12],
+            priceRating: free,
+            photo: images.circus,         
             location: {
                 latitude: 1.5347282806345879,
                 longitude: 110.35632207358996,
@@ -214,9 +225,10 @@ const Home = ({ navigation }) => {
             menu: [
                 {
                     menuId: 1,
-                    name: "Hoboken Farmers Market",
-                    photo: images.farmers_market_2,
-                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.",             
+                    name: "“CIRCUS LIVES: Hovering Above, Balancing Below” Art Exhibit",
+                    photo: images.circus,
+                    description: "Shop local fruits and vegetables, support small farmers, and gather with your community.", 
+                    address: "1301 Hudson Street",            
 
                 },
             ]   
@@ -228,29 +240,23 @@ const Home = ({ navigation }) => {
     const [restaurants, setRestaurants] = React.useState(restaurantData)
     const [currentLocation, setCurrentLocation] = React.useState(initialCurrentLocation)
 
-
     function onSelectCategory(category) {
         //filter restaurant
         let restaurantList = restaurantData.filter(a => a.categories.includes(category.id))
-
         setRestaurants(restaurantList)
-
         setSelectedCategory(category)
     }
 
     function getCategoryNameById(id) {
         let category = categories.filter(a => a.id == id)
-
         if (category.length > 0)
             return category[0].name
-
         return ""
     }
 
     function renderHeader() {
         return (
-            <View style={{ flexDirection: 'row', height: 50 }}>
-                
+            <View style={{ flexDirection: 'row', height: 50 }}> 
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                     <View
                         style={{
@@ -264,9 +270,7 @@ const Home = ({ navigation }) => {
                     >
                         <Text style={{ ...FONTS.h3 }}>{currentLocation.streetName}</Text>
                     </View>
-                </View>
-
-                
+                </View>               
             </View>
         )
     }

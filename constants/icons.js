@@ -15,6 +15,10 @@ export const markets = require("../assets/icons/markets.png");
 export const nature = require("../assets/icons/nature.png");
 export const adventure = require("../assets/icons/adventure.png");
 export const selfCare = require("../assets/icons/selfCare.png");
+export const kids = require("../assets/icons/kids.png");
+export const free = require("../assets/icons/free.png");
+export const all = require("../assets/icons/all.png");
+export const art = require("../assets/icons/art.png");
 
 export default {
    
@@ -35,5 +39,8 @@ export default {
     nature,
     adventure,
     selfCare,
-
+    kids,
+    free,
+    all,
+    art,
 }

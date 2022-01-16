@@ -1,15 +1,10 @@
 import React from 'react';
-import {
-    View,
-    Image,
-    TouchableOpacity
-} from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom-tabs"
 import Svg, { Path } from 'react-native-svg';
 import { isIphoneX } from 'react-native-iphone-x-helper';
 
 import { Home , favorites } from "../screens"
-
 import { COLORS, icons } from "../constants"
 
 const Tab = createBottomTabNavigator();
@@ -72,7 +67,6 @@ const TabBarCustomButton = ({ accessibilityState, children, onPress }) => {
 const CustomTabBar = (props) => {
     if (isIphoneX()) {
         return (
-            <View>
                 <View
                     style={{
                         position: 'absolute',
@@ -82,21 +76,9 @@ const CustomTabBar = (props) => {
                         height: 30,
                         backgroundColor: COLORS.white
                     }}
-                ></View>
-                <BottomTabBar
-                    {...props.props}
-                />
-            </View>
+                ></View>        
         )
-    } else {
-        return (
-            <BottomTabBar
-                {...props.props}
-            />
-        )
-    }
-
-}
+    } }
 
 const Tabs = () => {
     return (
@@ -109,15 +91,10 @@ const Tabs = () => {
                     bottom: 0,
                     right: 0,
                     borderTopWidth: 0,
-                    backgroundColor: "transparent",
+                    backgroundColor: "white",
                     elevation: 0
                 }
-            }}
-            tabBar={(props) => (
-                <CustomTabBar
-                    props={props}
-                />
-            )}
+            }}          
         >
             <Tab.Screen
                 name="Home"
@@ -133,12 +110,7 @@ const Tabs = () => {
                                 tintColor: focused ? COLORS.primary : COLORS.secondary
                             }}
                         />
-                    ),
-                    tabBarButton: (props) => (
-                        <TabBarCustomButton
-                            {...props}
-                        />
-                    )
+                    ),              
                 }}
             />
 
@@ -154,15 +126,10 @@ const Tabs = () => {
                                 width: 25,
                                 height: 25,
                                 tintColor: focused ? COLORS.primary : COLORS.secondary
-                            }}
+                            }} 
                         />
-                    ),
-                    tabBarButton: (props) => (
-                        <TabBarCustomButton
-                            {...props}
-                        />
-                    )
-                }}
+                    ),               
+                }} 
             />
 
             <Tab.Screen
@@ -179,12 +146,7 @@ const Tabs = () => {
                                 tintColor: focused ? COLORS.primary : COLORS.secondary
                             }}
                         />
-                    ),
-                    tabBarButton: (props) => (
-                        <TabBarCustomButton
-                            {...props}
-                        />
-                    )
+                    ),                   
                 }}
             />
 
@@ -203,15 +165,10 @@ const Tabs = () => {
                             }}
                         />
                     ),
-                    tabBarButton: (props) => (
-                        <TabBarCustomButton
-                            {...props}
-                        />
-                    )
                 }}
             />
         </Tab.Navigator>
     )
 }
 
-export default Tabs
+export default Tabs;

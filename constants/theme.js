@@ -3,7 +3,7 @@ const { width, height } = Dimensions.get("window");
 
 export const COLORS = {
     // base colors
-    primary: "#FC6D3F", // orange
+    primary: "#3CB371", // orange
     secondary: "#CDCDD2",   // gray
 
     // colors
@@ -22,7 +22,7 @@ export const SIZES = {
     // global sizes
     base: 8,
     font: 14,
-    radius: 10,
+    radius: 5,
     padding: 10,
     padding2: 12,
 

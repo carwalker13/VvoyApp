@@ -16,14 +16,10 @@ const Description = ({ route, navigation }) => {
 
     const scrollX = new Animated.Value(0);
     const [restaurant, setRestaurant] = React.useState(null);
-    const [currentLocation, setCurrentLocation] = React.useState(null);
-    const [orderItems, setOrderItems] = React.useState([]);
-
+    
     React.useEffect(() => {
-        let { item, currentLocation } = route.params;
-
+        let { item } = route.params;
         setRestaurant(item)
-        setCurrentLocation(currentLocation)
     })
 
     function renderHeader() {
@@ -32,7 +28,7 @@ const Description = ({ route, navigation }) => {
                 <TouchableOpacity
                     style={{
                         width: 50,
-                        paddingLeft: SIZES.padding * 2,
+                        paddingLeft: SIZES.padding*2,
                         justifyContent: 'center'
                     }}
                     onPress={() => navigation.goBack()}
@@ -47,7 +43,7 @@ const Description = ({ route, navigation }) => {
                     />
                 </TouchableOpacity>
 
-                {/* Restaurant Name Section */}
+                {/* Event Name */}
                 <View
                     style={{
                         flex: 1,
@@ -60,32 +56,27 @@ const Description = ({ route, navigation }) => {
                             height: 55,
                             alignItems: 'center',
                             justifyContent: 'center',
-                            paddingHorizontal: SIZES.padding * 3,
-                          //  borderRadius: SIZES.radius,
-                           // backgroundColor: COLORS.lightGray3
+                            paddingHorizontal: SIZES.padding * 3,                       
                         }}
                     >
                         <Text style={{ ...FONTS.h3 }}>{restaurant?.name}</Text>
                     </View>
                 </View>
-
             </View>
         )
     }
 
     function renderDescription() {
         return (
-            <Animated.ScrollView
-            >
-                {
-                    restaurant?.menu.map((item, index) => (
+            <Animated.ScrollView>
+                { restaurant?.menu.map((item, index) => (
                         <View
                             key={`menu-${index}`}
                             style={{ alignItems: 'center' }}
                         >
                             <View style={{ height: SIZES.height * 0.35 }}>
                                 
-                                {/* Event Image */}
+                                {/* Image */}
                                 <Image
                                     source={item.photo}
                                     resizeMode="cover"
@@ -117,9 +108,7 @@ const Description = ({ route, navigation }) => {
 
     function renderOrder() {
         return (
-            <View>
-                {
-                }
+            <View>              
                 <View
                     style={{
                         backgroundColor: COLORS.white,
@@ -137,8 +126,7 @@ const Description = ({ route, navigation }) => {
                             borderBottomWidth: 1
                         }}
                     >
-                        <Text style={{ ...FONTS.h3 }}>Every Tuesday, 2-6pm</Text>
- 
+                        <Text style={{ ...FONTS.h3 }}>Day and Time</Text>
                     </View>
 
                     <View
@@ -159,7 +147,7 @@ const Description = ({ route, navigation }) => {
                                     tintColor: COLORS.darkgray
                                 }}
                             />
-                            <Text style={{ marginLeft: SIZES.padding, ...FONTS.h3 }}>400 Garden Street</Text>
+                            <Text style={{ marginLeft: SIZES.padding, ...FONTS.h3 }}>Location</Text> 
                         </View>
                     </View>
 
@@ -221,4 +209,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Description
+export default Description;
