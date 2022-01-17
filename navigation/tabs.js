@@ -4,7 +4,7 @@ import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom
 import Svg, { Path } from 'react-native-svg';
 import { isIphoneX } from 'react-native-iphone-x-helper';
 
-import { Home , favorites } from "../screens"
+import { Home , favorites, mapp, profile } from "../screens"
 import { COLORS, icons } from "../constants"
 
 const Tab = createBottomTabNavigator();
@@ -37,7 +37,7 @@ const TabBarCustomButton = ({ accessibilityState, children, onPress }) => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         width: 50,
-                        height: 50,
+                        height: 60,
                         borderRadius: 25,
                         backgroundColor: COLORS.white
                     }}
@@ -116,7 +116,7 @@ const Tabs = () => {
 
             <Tab.Screen
                 name="Map"
-                component={Home}
+                component={mapp}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
@@ -151,8 +151,8 @@ const Tabs = () => {
             />
 
             <Tab.Screen
-                name="User"
-                component={Home}
+                name="profile"
+                component={profile}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image

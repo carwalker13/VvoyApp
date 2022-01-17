@@ -11,10 +11,10 @@ import {
 
 import { icons, images, SIZES, COLORS, FONTS } from '../constants'
 
-const mapp = ({ navigation }) => {
+const profile = ({ navigation }) => {
     return(
         <SafeAreaView style={styles.container}>
-        <Text>Testing map screen</Text>
+        <Text>Testing profile screen</Text>
     </SafeAreaView>
     )
 }
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default mapp
+export default profile

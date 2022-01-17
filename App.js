@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native'
 import { useFonts } from 'expo-font';
 
-import { Home, Description, favorites } from './screens'
+import { Home, Description, favorites, mapp, profile } from './screens'
 import Tabs from './navigation/tabs'
 
 const Stack = createStackNavigator();
@@ -30,6 +30,7 @@ const App = () => {
               >
                   <Stack.Screen name="List" component={Tabs} />
                   <Stack.Screen name="Description" component={Description} /> 
+                  <Stack.Screen name="Map" component={mapp} /> 
                  
               </Stack.Navigator>
           </NavigationContainer>
