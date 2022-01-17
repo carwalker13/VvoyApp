@@ -14,7 +14,6 @@ import { icons, COLORS, SIZES, FONTS } from '../constants'
 
 const Description = ({ route, navigation }) => {
 
-    const scrollX = new Animated.Value(0);
     const [restaurant, setRestaurant] = React.useState(null);
     
     React.useEffect(() => {
@@ -127,6 +126,7 @@ const Description = ({ route, navigation }) => {
                         }}
                     >
                         <Text style={{ ...FONTS.h3 }}>Day and Time</Text>
+
                     </View>
 
                     <View
@@ -144,10 +144,10 @@ const Description = ({ route, navigation }) => {
                                 style={{
                                     width: 20,
                                     height: 20,
-                                    tintColor: COLORS.darkgray
                                 }}
                             />
-                            <Text style={{ marginLeft: SIZES.padding, ...FONTS.h3 }}>Location</Text> 
+                            <Text style={{ marginLeft: SIZES.padding, ...FONTS.h3 }}>Location</Text>
+     
                         </View>
                     </View>
 
